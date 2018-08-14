@@ -1,3 +1,7 @@
+if VERSION >= v"0.7.0"
+    using Pkg
+end
+
 @static if !isdefined(Base, Symbol("@info"))
     macro info(msg)
         return :(info($(esc(msg))))
